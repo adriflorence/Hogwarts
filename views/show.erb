@@ -1,5 +1,5 @@
 <p>Name: <%= @student.pretty_name() %></p>
-<p>House: <%= @student.house %></p>
+<p>House: <%= @student.house.name %></p>
 <p>Age: <%= @student.age %></p>
 
 <form method="post" action="/students/<%= @student.id %>/delete">

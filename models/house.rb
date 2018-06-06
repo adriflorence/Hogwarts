@@ -15,14 +15,12 @@ class House
   def save()
     sql = "INSERT INTO houses (name) VALUES ($1) RETURNING id"
     values = [@name]
-
     house_data = SqlRunner.run(sql, values)
     @id = house_data.first()['id'].to_i
-    # binding.pry
   end
 
   def self.all()
-    sql = "SELECT FROM houses"
+    sql = "SELECT * FROM houses"
     houses = SqlRunner.run( sql )
     result = houses.map { |house| House.new( house ) }
     return result

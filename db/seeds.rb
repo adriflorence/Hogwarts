@@ -1,5 +1,6 @@
 require_relative('../models/student')
 require_relative('../models/house')
+require('pry-byebug')
 
 Student.delete_all()
 House.delete_all()
@@ -69,3 +70,6 @@ student4.save()
 student5.save()
 student6.save()
 student7.save()
+
+binding.pry
+nil
