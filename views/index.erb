@@ -2,5 +2,5 @@
 
 <% for student in @students %>
   <p> Name: <%= student.pretty_name() %> </p>
-  <p> <a href="/pizza-orders/<%= order.id%>">Show Student Info</a></p>
+  <p> <a href="/students/<%= student.id%>">Show Student Info</a></p>
 <% end %>
