@@ -5,11 +5,12 @@ require_relative("student.rb")
 
 class House
 
-  attr_reader :id, :name
+  attr_reader :id, :name, :color
 
   def initialize(details)
     @id = details['id'].to_i
     @name = details['name']
+    @color = ""
   end
 
   def save()
@@ -17,6 +18,19 @@ class House
     values = [@name]
     house_data = SqlRunner.run(sql, values)
     @id = house_data.first()['id'].to_i
+  end
+
+  def color()
+    case @name
+      when 'Gryffindor'
+        @color = 'orange'
+      when 'Ravenclaw'
+        @color = 'green'
+      when 'Hufflepuff'
+        @color = 'yellow'
+      when 'Slytherin'
+        @color = 'blue'
+      end
   end
 
   def self.all()

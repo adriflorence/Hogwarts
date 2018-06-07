@@ -1,0 +1,105 @@
+body {
+  background-image: url('img/bg.jpg')
+}
+
+#header, h1 {
+  text-align: center;
+}
+
+.container {
+  border: solid 1px black;
+  display: flex;
+  /* container MUST have height for the flex-basis to happen in the media query  */
+  min-height: 500px;
+  flex-direction: row;
+  width: 900px;
+  margin: 10px auto;
+  position: relative;
+}
+
+.box {
+  /* flex basis is width when horizontal, and height when vertial */
+  flex-basis: 10px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.box a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: Tahoma;
+}
+
+.box a:hover {
+  font-size: 22px;
+}
+
+.box img {
+   width: 100px;
+}
+
+.orange {
+  background-color: #D74F3F;
+}
+
+.green {
+  background-color: #005D4B;
+}
+
+.yellow {
+  background-color: #FDB82D;
+}
+
+.blue {
+  background-color: #21316C;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=text], input[type=number], #house_select {
+    padding: 10px 20px;
+    margin: 8px auto;
+    border: none;
+    border-radius: 2px;
+}
+
+
+/*  SHOW PAGE */
+
+#profile {
+  padding: 20px;
+}
+
+#avatar img {
+  width: 140px;
+  height: 140px;
+}
+
+#house_logo {
+  position: absolute;
+  left: 780px;
+  bottom: 280px;
+}
+
+#house_logo img {
+  width: 100px;
+
+}
+
+.button_div input{
+  display:block;
+  margin: 0px auto;
+}

@@ -1,6 +1,43 @@
 <h1> Here all the students are listed: </h1>
 
-<% for student in @students %>
-  <p> Name: <%= student.pretty_name() %> </p>
-  <p> <a href="/students/<%= student.id%>">Show Student Info</a></p>
-<% end %>
+<div class="container">
+
+  <div class="box orange">
+    <img src="/img/Gryffindor.png"/>
+    <% for student in @students %>
+      <% if student.house.name == 'Gryffindor' %>
+          <p> <a href="/students/<%= student.id%>"> <%= student.pretty_name() %> </a></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="box green">
+    <img src="/img/Ravenclaw.png"/>
+    <% for student in @students %>
+      <% if student.house.name == 'Ravenclaw' %>
+          <p> <a href="/students/<%= student.id%>"> <%= student.pretty_name() %> </a></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="box yellow">
+    <img src="/img/Hufflepuff.png"/>
+    <% for student in @students %>
+      <% if student.house.name == 'Hufflepuff' %>
+          <p> <a href="/students/<%= student.id%>"> <%= student.pretty_name() %> </a></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="box blue">
+    <img src="/img/Slytherin.png"/>
+    <% for student in @students %>
+      <% if student.house.name == 'Slytherin' %>
+          <p> <a href="/students/<%= student.id%>"> <%= student.pretty_name() %> </a></p>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>
+<div class="button_div">
+  <form method="get" action="/students/new">
+      <p><input type='submit' value="Add New Student"/></p>
+  </form>
+</div>
